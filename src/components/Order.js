@@ -1,13 +1,15 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 
 class Order extends React.Component {
-	render() {
-		return (<Fragment>
-			<Fragment>
-				<div className="order">Inventory</div>
-			</Fragment>
-		</Fragment>);
-	}
+  render() {
+    return (
+      <Fragment>
+        <Fragment>
+          <div className="order">Order</div>
+        </Fragment>
+      </Fragment>
+    );
+  }
 }
 
 export default Order;
