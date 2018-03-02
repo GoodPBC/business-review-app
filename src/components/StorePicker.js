@@ -2,21 +2,16 @@ import React, { Fragment } from 'react';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
-  constructor() {
-    super();
-    this.goToBusiness = this.goToBusiness.bind(this);
-  }
-  //empty ref
   inputRef = React.createRef();
-
-  goToBusiness(event) {
+  //set go to business as property to bind "this" to component instance
+  goToBusiness = event => {
     //prevent page reload
     event.preventDefault();
-    console.log('going the the store');
     //grab text from input
-    console.log(this);
-    //go to business profile entered
-  }
+    const businessName = this.inputRef.value.value;
+    //use react history.push for routing to go to business profile entered
+    this.props.history.push(`/store/${businessName}`);
+  };
 
   render() {
     return (
